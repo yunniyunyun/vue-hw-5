@@ -141,12 +141,11 @@ const app = Vue.createApp({
                     message:''
                 }
                 this.state.order = false;
-                this.getCart();
-                console.log(res)
+                this.getCarts();
                 // alert(res.message);
             })
             .catch(err => {
-                alert(err.data?.message);
+                alert(err);
                 this.state.order = false;
             });
         },
